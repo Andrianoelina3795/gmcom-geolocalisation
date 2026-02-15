@@ -1,12 +1,11 @@
 # gmcom-geolocalisation
-# GeoApp 
    Application web de géolocalisation et de suivi en temps réel des activités des agents commerciaux - GMCOM.
    
    ## Prérequis
    - PHP 8.1+
    - Composer
    - Node.js 18+
-   - MySQL
+   - PostgreSQL
    
    ## Installation
     # Installez le backend :
@@ -15,17 +14,17 @@
       composer install
       cp .env.example .env
       php artisan key:generate
-      # configurez votre base de données dans .env
+    # configurez votre base de données dans .env
       php artisan migrate
       php artisan serve
 
-      # Installez le frontend :
+    # Installez le frontend :
       bash
       cd geo/geo_front
       npm install
       npm start
       
-      # Lancez le serveur socket :
+    # Lancez le serveur socket :
       bash
       cd geo/socket-server
       npm install
