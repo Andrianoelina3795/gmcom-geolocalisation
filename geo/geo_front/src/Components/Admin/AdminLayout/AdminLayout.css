@@ -1,0 +1,20 @@
+.admin-layout {
+  display: flex;
+}
+
+.admin-content {
+  margin-left: 240px;
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.admin-content.collapsed {
+  margin-left: 70px;
+}
+
+@media (max-width: 767px) {
+  .admin-content,
+  .admin-content.collapsed {
+    margin-left: 0;
+  }
+}

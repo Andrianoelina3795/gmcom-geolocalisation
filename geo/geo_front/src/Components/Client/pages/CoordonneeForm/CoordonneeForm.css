@@ -1,0 +1,424 @@
+/* Container principal */
+.header-coordonnee {
+  min-height: 100vh;
+background: linear-gradient(135deg,  navajowhite 0%, #75deb3 100%);
+  padding: 20px;
+}
+
+.coordonnee-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Boîte du formulaire */
+.coordonnee-form-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+}
+
+/* Icône */
+.coordonnee-form-box svg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.coordonnee-form-box svg:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Titre */
+.coordonnee-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de brillance sur le titre */
+.coordonnee-title::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(30deg);
+  }
+}
+
+/* Description */
+.coordonnee-description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* Informations de position */
+.coordonnee-form-box {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #dee2e6;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.coordonnee-form-box {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Formulaire */
+.coordonnee-form {
+  margin-top: 20px;
+}
+
+.coordonnee-form .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  background: #f8f9fa;
+  color: #495057;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coordonnee-form .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  background: white;
+}
+
+/* Boutons */
+.d-grid.gap-2 {
+  gap: 15px !important;
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ffd93d 0%, #ff9a3d 100%);
+  color: #2c3e50;
+}
+
+.btn-warning:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 157, 61, 0.4);
+  background: linear-gradient(135deg, #ffdf5e 0%, #ffaa5e 100%);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #7688ec 0%, #865bb2 100%);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Alertes */
+.alert {
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+  color: white;
+}
+
+.alert-secondary {
+  background: linear-gradient(135deg, #a9b4c2 0%, #7d8597 100%);
+  color: white;
+  border: 2px solid #5c677d;
+}
+
+.alert svg {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Détails de la zone */
+.zone-details {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
+  border: 2px solid #2196f3 !important;
+  border-radius: 15px !important;
+  margin-top: 25px;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+  transition: all 0.3s ease;
+}
+
+.zone-details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+}
+
+.zone-details h5 {
+  color: #1976d2;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #64b5f6;
+  padding-bottom: 10px;
+}
+
+.zone-details li {
+  padding: 8px 0;
+  border-bottom: 1px solid #90caf9;
+  font-size: 1rem;
+}
+
+.zone-details li:last-child {
+  border-bottom: none;
+}
+
+.zone-details strong {
+  color: #1565c0;
+  min-width: 100px;
+  display: inline-block;
+}
+
+/* Spinner de chargement */
+.spinner-grow {
+  border-color: #007bff;
+  border-right-color: transparent;
+}
+
+.d-flex.justify-content-center.align-items-center {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px dashed #667eea;
+}
+
+/* Animation d'entrée */
+.coordonnee-page {
+  animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Indicateur de précision */
+.precision-indicator {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.precision-good {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.precision-poor {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-coordonnee {
+    padding: 10px;
+  }
+  
+  .coordonnee-form-box {
+    padding: 25px 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  .coordonnee-title {
+    font-size: 1.8rem;
+    padding: 12px 20px;
+  }
+  
+  .coordonnee-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .coordonnee-form .form-control {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .zone-details {
+    padding: 15px !important;
+  }
+  
+  .zone-details li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coordonnee-form-box {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+  
+  .coordonnee-title {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+  }
+  
+  .coordonnee-description {
+    font-size: 1rem;
+  }
+  
+  .coordonnee-form-box {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  .d-grid.gap-2 {
+    gap: 10px !important;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+.coordonnee-form-box:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.btn:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Style pour les états de statut de zone */
+.zone-status-inside {
+  color: #28a745;
+  font-weight: 700;
+}
+
+.zone-status-outside {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+/* Animation pour les mises à jour automatiques */
+.auto-update-indicator {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #856404;
+  text-align: center;
+  animation: pulse-gentle 2s infinite;
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Style pour les champs masqués */
+input[type="text"][readonly] {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Amélioration du contraste pour l'accessibilité */
+@media (prefers-contrast: high) {
+  .coordonnee-form-box {
+    background: white;
+    border: 2px solid #333;
+  }
+  
+  .btn {
+    border: 2px solid;
+  }
+}

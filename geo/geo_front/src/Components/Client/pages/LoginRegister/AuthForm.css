@@ -1,0 +1,208 @@
+/* ----- Mise en page générale (fond dégradé + effet blur) ----- */
+.auth-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Formes décoratives */
+.background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(#1845ad, #23a2f6);
+  z-index: 0;
+}
+
+.background .shape:nth-child(1) {
+  top: -80px;
+  left: -80px;
+}
+.background .shape:nth-child(2) {
+  bottom: -80px;
+  right: -80px;
+}
+
+/* ----- Formulaire ----- */
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1;
+}
+
+.auth-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #14213D;
+  font-weight: bold;
+}
+
+/* ----- Champs de saisie ----- */
+.input-group {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 4px;
+}
+
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group input[type="password"],
+.input-group input[type="text"],
+.input-group input[type="file"] {
+  width: 100%;
+  padding: 10px 10px 10px 45px;
+  padding-top: 5px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Icônes dans les champs */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+}
+
+/* Labels */
+.label-login {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+  display: inline-block;
+}
+
+/* Couleurs personnalisées */
+.icon-purple { color: #6f42c1; }
+.icon-red { color: #dc3545; }
+.icon-blue { color: #007bff; }
+.icon-green { color: #28a745; }
+
+/* Bouton principal */
+.auth-form button {
+  width: 100%;
+  padding: 6px 10px;
+  background-color: #14213D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #0e1a2b;
+}
+
+/* Texte & liens */
+.text-primary {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.text-primary:hover {
+  text-decoration: underline;
+}
+
+.t1 {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Check box RGPD */
+.form-check {
+  font-size: 0.85rem;
+  display: flex;
+}
+
+/* ----- Réseaux sociaux ----- */
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.social .go,
+.social .fb {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social .go {
+  background-color: #dd4b39;
+}
+
+.social .go:hover {
+  background-color: #c23321;
+}
+
+.social .fb {
+  background-color: #3b5998;
+}
+
+.social .fb:hover {
+  background-color: #2d4373;
+}
+
+.social .go svg,
+.social .fb svg {
+  margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-body {
+    padding: 10px;
+  }
+
+  .auth-form {
+    padding: 30px 20px;
+  }
+
+  .social {
+    flex-direction: column;
+  }
+
+  .social .go,
+  .social .fb {
+    width: 100%;
+  }
+}

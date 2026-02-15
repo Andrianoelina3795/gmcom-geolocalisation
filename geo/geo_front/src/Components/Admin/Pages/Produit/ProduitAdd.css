@@ -1,0 +1,81 @@
+/* Conteneur principal */
+.header-contact {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Boîte centrale */
+.contact-form-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre du formulaire */
+.contact-title {
+  font-weight: bold;
+  color: #198754; /* Vert Bootstrap (btn-success) */
+}
+
+/* Champs du formulaire */
+.contact-form .form-control,
+.contact-form .form-select {
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+/* Placeholder */
+.contact-form .form-control::placeholder {
+  color: #6c757d;
+}
+
+/* Bouton Enregistrer */
+.contact-btn {
+  background-color: #198754; /* vert Bootstrap */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover bouton vert */
+.contact-btn:hover {
+  background-color: #157347;
+}
+
+/* Bouton Retour */
+.btn-outline-secondary {
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .contact-form-box {
+    padding: 20px;
+  }
+
+  .contact-form .btn,
+  .contact-btn {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .btn-outline-secondary {
+    margin-left: 0;
+  }
+}
+
+
+
+

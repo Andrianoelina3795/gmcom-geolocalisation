@@ -1,0 +1,145 @@
+/* Styles d'impression */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .print-cv, .print-cv * {
+    visibility: visible;
+  }
+  
+  .print-cv {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Conteneur principal */
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* En-tête */
+.cv-header {
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.cv-header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.cv-date {
+  margin-top: 5px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Contenu principal */
+.cv-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.cv-info {
+  flex: 2;
+}
+
+.cv-photo {
+  flex: 1;
+  text-align: center;
+}
+
+/* Sections d'information */
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-section h3 {
+  background-color: #f5f5f5;
+  padding: 8px 12px;
+  margin: 15px 0 10px 0;
+  border-left: 4px solid #3498db;
+  font-size: 16px;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  border-bottom: 1px dotted #eee;
+}
+
+.info-label {
+  font-weight: bold;
+  min-width: 150px;
+  color: #555;
+}
+
+.info-value {
+  flex: 1;
+  color: #333;
+}
+
+/* Photo */
+.cv-img {
+  max-width: 200px;
+  max-height: 250px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+.no-photo {
+  width: 200px;
+  height: 250px;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+/* Pied de page */
+.cv-footer {
+  border-top: 2px solid #333;
+  padding-top: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.signature {
+  margin-bottom: 15px;
+}
+
+.signature p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive pour l'impression */
+@media print and (max-width: 600px) {
+  .cv-content {
+    flex-direction: column;
+  }
+  
+  .cv-photo {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}

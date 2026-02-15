@@ -1,0 +1,237 @@
+/* ---------- Header principal ---------- */
+.main-header {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;   /* important : colle le header à gauche */
+  right: 0;  /* important : colle le header à droite */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+/* ---------- Conteneur intérieur ---------- */
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo h4 {
+  margin: 0 0 0 8px;
+  font-weight: bold;
+  color: #222;
+  font-size: 1rem;
+}
+
+.logo span {
+  display: block;
+  font-size: 0.7rem;
+  color: #8B0000;
+  margin-top: -4px;
+}
+
+/* ---------- Navigation Desktop ---------- */
+.nav-section .nav-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-section .nav-link:hover {
+  color: #007bff;
+}
+
+.myAccWrapper img {
+  object-fit: cover;
+}
+
+/* ---------- Bouton Burger Mobile ---------- */
+.burger-button {
+  font-size: 26px;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ---------- Sidebar Mobile ---------- */
+.sidebar-mobile {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-mobile a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar-mobile a:hover {
+  color: #007bff;
+}
+
+/* ---------- Utilisateur Sidebar Mobile ---------- */
+.sidebar-mobile .myAccWrapper {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-mobile .myAccWrapper .myAcc {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.sidebar-mobile .myAccWrapper .myAcc img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8B0000;
+  transition: border-color 0.3s ease;
+}
+
+.sidebar-mobile .myAccWrapper .myAcc:hover img {
+  border-color: #007bff;
+}
+
+.sidebar-mobile .myAccWrapper .myAcc span {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* ---------- Mode Sombre ---------- */
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-mode .main-header {
+  background-color: #333;
+}
+
+body.dark-mode .nav-section .nav-link {
+  color: #fff;
+}
+
+body.dark-mode .sidebar-mobile {
+  background-color: #444;
+}
+
+body.dark-mode .sidebar-mobile a {
+  color: #fff;
+  border-color: #666;
+}
+
+body.dark-mode .sidebar-mobile .myAccWrapper {
+  border-top-color: #666;
+}
+
+body.dark-mode .sidebar-mobile .myAccWrapper .myAcc span {
+  color: #fff;
+}
+
+body.dark-mode .sidebar-mobile .myAccWrapper .myAcc img {
+  border-color: #b8860b;
+}
+
+body.dark-mode .sidebar-mobile .myAccWrapper .myAcc:hover img {
+  border-color: #66bfff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767px) {
+  .main-header {
+    padding: 10px 16px;
+  }
+
+  .container-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo h4 {
+    font-size: 0.9rem;
+  }
+
+  .logo span {
+    font-size: 0.6rem;
+  }
+
+  .nav-section {
+    display: none !important;
+  }
+
+  .burger-button {
+    display: block;
+  }
+}
+
+/* ---------- Animation Sidebar ---------- */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-in {
+  animation: slideInRight 0.4s ease forwards;
+}
+
+.slide-out {
+  animation: slideOutRight 0.4s ease forwards;
+}

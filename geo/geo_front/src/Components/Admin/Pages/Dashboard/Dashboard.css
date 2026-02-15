@@ -1,0 +1,298 @@
+/* Variables CSS pour une meilleure maintenabilité */
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+    --shadow-light: 0 4px 15px rgba(0,0,0,0.1);
+    --shadow-medium: 0 8px 25px rgba(0,0,0,0.15);
+    --shadow-heavy: 0 4px 12px rgba(0,0,0,0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --bg-color: #f8f9fa;
+}
+
+/* Animation de rotation pour l'icône de rafraîchissement */
+.spinning {
+    animation: spin 1s linear infinite;
+    transform-origin: center;
+}
+
+/* Spinner de chargement */
+.spinner-grow.text-primary {
+  border-color: #007bff;
+  border-right-color: transparent;
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+/* Styles pour les cartes de statistiques */
+.stat-card {
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    transform: translateY(0);
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium) !important;
+    text-decoration: none;
+}
+
+.stat-icon {
+    opacity: 0.9;
+}
+
+.stat-card a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.stat-card a:hover {
+    color: inherit !important;
+}
+
+/* Personnalisation des tooltips */
+.custom-tooltip {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid #dee2e6 !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-heavy) !important;
+    padding: 12px !important;
+    font-size: 14px;
+}
+
+.custom-tooltip .font-weight-bold {
+    color: #333;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.custom-tooltip .text-primary {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* Styles pour Recharts */
+.recharts-default-tooltip {
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-heavy) !important;
+    border: none !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.recharts-legend-wrapper {
+    padding-top: 10px !important;
+}
+
+.recharts-text {
+    font-family: inherit !important;
+    font-size: 12px !important;
+}
+
+/* Style pour le dropdown du profil */
+.dropdown-toggle::after {
+    margin-left: 0.5rem;
+}
+
+.dropdown-toggle {
+    transition: var(--transition);
+    border-radius: 50px !important;
+}
+
+.dropdown-toggle:hover {
+    background-color: #e9ecef !important;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-heavy);
+    margin-top: 10px !important;
+}
+
+.dropdown-item {
+    transition: var(--transition);
+    border-radius: 4px;
+    margin: 2px 8px;
+    width: auto;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Loading states */
+.dash {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+/* Alertes personnalisées */
+.alert {
+    border: none;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+}
+
+.alert-warning {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid var(--warning-color);
+}
+
+.alert-info {
+    background: rgba(23, 162, 184, 0.1);
+    border-left: 4px solid var(--info-color);
+}
+
+/* Désactivation élégante */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dash {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dash {
+        padding: 10px;
+    }
+    
+    .content-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .dropdown.text-end {
+        align-self: center;
+    }
+    
+    .stat-container .row {
+        margin: 0 -5px;
+    }
+    
+    .stat-container .col-md {
+        padding: 0 5px;
+        margin-bottom: 10px;
+    }
+    
+    .stat-card {
+        height: 120px !important;
+        padding: 1rem !important;
+    }
+    
+    .graph-container {
+        flex-direction: column;
+    }
+    
+    .graph-container > div {
+        width: 100% !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    .recharts-responsive-container {
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .dash {
+        padding: 8px;
+    }
+    
+    .stat-card {
+        height: 100px !important;
+    }
+    
+    .stat-icon {
+        display: none;
+    }
+    
+    .content-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .recharts-responsive-container {
+        height: 200px !important;
+    }
+}
+
+/* Thème sombre (optionnel) */
+@media (prefers-color-scheme: dark) {
+    .dash {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .card {
+        background-color: #2d2d2d;
+        border-color: #404040;
+    }
+    
+    .custom-tooltip {
+        background: rgba(45, 45, 45, 0.95) !important;
+        color: #ffffff;
+        border-color: #404040 !important;
+    }
+    
+    .dropdown-menu {
+        background-color: #2d2d2d;
+        border-color: #404040;
+    }
+    
+    .dropdown-item {
+        color: #ffffff;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #404040;
+        color: #ffffff;
+    }
+}
+
+/* Accessibilité - Focus states */
+.btn:focus,
+.dropdown-toggle:focus,
+.stat-card:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Impression */
+@media print {
+    .dash {
+        padding: 0;
+        background: white;
+    }
+    
+    .btn,
+    .dropdown,
+    .alert {
+        display: none !important;
+    }
+    
+    .stat-card {
+        break-inside: avoid;
+    }
+}

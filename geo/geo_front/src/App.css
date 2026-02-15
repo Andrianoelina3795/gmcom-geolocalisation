@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.img-circle{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+ border: 2px solid #eee;
+ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f1f1f1 !important;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0858f7 !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.btn-blue {
+  background: #0858f7 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  border-radius: 5px !important;
+}
+
+.btn-lg {
+  padding: 5px 25px !important;
+}
+
+.btn-big {
+  padding: 10px 25px !important;
+  font-size: 15px !important;
+}
+
+.btn-big svg{font-size: 25px !important; margin-left: 7px;}
+
+.btn-round {
+  border-radius: 30px !important;
+}
+
+.full {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+}
+
+.link {
+  color: #5e5d72;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #0858f7 !important;
+  text-decoration: none;
+}
+
+.link.color{
+  color: #0858f7 !important;
+  text-decoration: none;
+} 
+
+.text-sky{color: #0858f7;}
+
+header {
+  width: 100% !important;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: #403e57;
+}
+
+header .logo {
+  text-decoration: none;
+}
+
+header .logo img {
+  width: 45px;
+}
+
+header .logo span {
+  color: #292929;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+header button.rounded-circle {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  background: #f0f5ff !important;
+  color: #292929;
+}
+
+header button.rounded-circle svg {
+  color: #292929;
+  font-size: 18px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+header button.rounded-circle:hover svg {
+  color: #0858f7 !important;
+}
+
+header .part2 {
+  padding-left: 50px;
+}
+
+.searchBox {
+  width: 280px;
+  height: 40px;
+  background: #f0f5ff;
+  border-radius: 6px;
+  padding: 3px 15px;
+}
+
+.searchBox input {
+  background: transparent;
+  border: 0px;
+  outline: none;
+  padding-left: 0px;
+  font-size: 15px;
+  color: #292929;
+}
+
+.searchBox input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.searchBox svg {
+  font-size: 18px;
+  color: #292929;
+}
+
+.myAcc {
+  text-align: left !important;
+  color: #000 !important;
+  text-transform: capitalize !important;
+}
+
+.myAcc .userImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #0858f7;
+  padding: 3px;
+  border-radius: 100%;
+}
+
+.myAcc .userImg .rounded-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 40px;
+  height: 100%px;
+  cursor: pointer;
+  position: relative;
+}
+
+.myAcc .userImg .rounded-circle img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.myAcc .userInfo {
+  padding-left: 15px;
+}
+
+.myAcc .userInfo h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: #292929;
+}
+
+.myAcc .userInfo p {
+  margin-top: 0px;
+  font-size: 12px;
+  color: #000;
+  opacity: 0.7;
+}
+
+#account-menu li {
+  font-size: 15px !important;
+  padding: 12px 15px !important;
+}
+
+#account-menu li svg {
+  font-size: 20px !important;
+}
+
+.main .content {
+  width: 80%;
+  flex: 0 0 80%;
+  transition: all 0.3s;
+}
+
+.main .content.toggle {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.right-content {
+  padding: 90px 30px;
+  padding-bottom: 10px;
+ 
+}
+
+.dashboardBoxWrapper {
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.dashboardBoxWrapper .dashboardBox {
+  width: 45%;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left !important;
+  position: relative;
+  color: #fff;
+  text-transform: capitalize !important;
+}
+
+.dashboardBoxWrapper .dashboardBox .col1 h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dashboardBoxWrapper .dashboardBox .col1 span {
+  font-size: 35px !important;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+.dashboardBoxWrapper .dashboardBox .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right,
+      rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2));
+}
+
+.dashboardBoxWrapper .dashboardBox .icon svg {
+  font-size: 36px;
+  opacity: 0.3;
+  color: #fff;
+}
+
+.dashboardBoxWrapper .dashboardBox .toggleIcon {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.dashboardBoxWrapper .dashboardBox .chart {
+  opacity: 0.050;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.dashboardBoxWrapper .dashboardBox .chart svg {
+  font-size: 110px;
+  color: #000;
+}
+
+.dashboardBoxWrapper .dashboardBox .bottomEle {
+  position: relative;
+  top: 15px;
+}
+
+.dashboardBoxWrapperRow .box {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+}
+
+.dashboardBoxWrapper .dashboardBox .MuiList-root svg {
+  color: #000 !important;
+  font-size: 17px !important;
+  margin-right: 10px !important;
+}
+
+.dashboardBoxWrapper .dashboardBox .bottomEle .MuiButtonBase-root svg {
+  margin-right: 10px !important;
+}
+
+.dropDown_menu .MuiButtonBase-root svg {
+  margin-right: 10px !important;
+}
+
+.dashboardBoxWrapperRow .graphBox {
+  background-image: linear-gradient(#1a50b5, #2a6ff7);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.toggleIcon {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.toggleIcon svg {
+  color: #fff !important;
+  font-size: 20px !important;
+  opacity: 1 !important;
+}
+
+.dashboardBoxWrapper .graphBox h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dashboardBoxWrapper .graphBox p {
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.card {
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+
+.card .hd {
+  font-size: 18px;
+  font-weight: bold;
+  color: #403e57;
+}
+
+.cardFilters .col-md-3 h4 {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #403e57;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #403e57;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
+
+.table .thead-dark th {
+  background-color: #1866ee !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  font-size: 13px !important;
+}
+
+.table tbody td {
+  font-size: 13px !important;
+  color: #2f2d3e;
+}
+
+.table tbody .actions button {
+  min-width: 30px !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin: 0px 3px !important;
+}
+
+.table tbody .actions button.secondary {
+  background: rgba(203, 60, 231, 0.2) !important;
+}
+
+.table tbody .actions button.success {
+  background: rgba(26, 159, 83, 0.2) !important;
+}
+
+.table tbody .actions button.error {
+  background: rgba(241, 17, 51, 0.2) !important;
+}
+
+.table tbody .actions button svg {
+  font-size: 32px !important;
+}
+
+table .v-align td {
+  vertical-align: middle !important;
+}
+
+table td .imgWrapper {
+  width: 25%;
+  flex: 0 0 25%;
+}
+
+table td .info {
+  width: 75%;
+  flex: 0 0 75%;
+}
+
+table .v-align td .info h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+table .v-align td .info p {
+  font-size: 13px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #5e5d72;
+  margin-bottom: 0px;
+}
+
+table.v-align td .employeBox {
+  width: 270px;
+}
+
+.tableFooter p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.tableFooter {
+  padding-bottom: 20px;
+}
+
+.tableFooter .pagination {
+  margin-left: auto;
+}
+
+.css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #0858f7 !important;
+}
+
+.loginSection {
+  width: 100%;
+  height: 100vh;
+  padding: 35px 25px;
+  background: #fff;
+  position: relative;
+}
+
+.fondPatern {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.loginSection .loginBox {
+  width: 350px;
+  height: auto;
+  margin: auto;
+}
+
+.loginSection .loginBox .wrapper .form-group {
+  margin-bottom: 18px;
+}
+
+.loginSection .loginBox .wrapper {
+  width: 100%;
+  height: auto;
+  background: #f0f0f0;
+  position: relative;
+  z-index: 100;
+  padding: 35px;
+}
+
+.loginSection .loginBox .wrapper .form-control {
+  background: #fff !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 8px !important;
+  font-size: 14px;
+  font-weight: 600;
+  height: 45px;
+  padding-left: 40px;
+}
+
+.loginSection .loginBox .wrapper .form-group.focus .icon svg {
+  color: #0858f7 !important;
+}
+
+.loginSection .loginBox .wrapper .form-control:focus {
+  border: 1px solid #0858f7 !important;
+}
+
+.loginSection .loginBox .wrapper .form-group .icon {
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  z-index: 100;
+  font-size: 23px;
+}
+
+.loginSection .loginBox .wrapper .form-group .icon svg {
+  color: #5e5d72;
+}
+
+.toggleShowPassword {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.toggleShowPassword svg {
+  font-size: 22px;
+  color: #5e5d72;
+}
+
+.loginSection .loginBox .wrapper .link {
+  font-size: 14px;
+}
+
+.loginSection .loginBox .wrapper .or span.line {
+  display: block;
+  width: 35%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.loginSection .loginBox .wrapper .or span.txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+  
+.loginWithGoogle{text-transform: capitalize !important; font-weight: bold !important; }
+ 
+.signUpSection{background: #f1f1f1 !important; padding: 0px 0px; height: auto !important;}
+.signUpSection .loginBox{background: #e4e4e4 !important; position: relative; z-index: 100; width: 100% !important;
+padding: 25px 5px !important;}
+.signUpSection .loginBox .wrapper{border: 0px !important; background: transparent !important; 
+padding-top: 10px !important;}
+
+.signUpSection .part1{padding-left: 50px; padding-right: 100px;}
+.signUpSection .part1 h1{font-size: 50px; font-weight: 800;}
+.signUpSection .part1 p{font-size: 18px; font-weight: 500; }
+
+.dashboardWrapper {
+  display: flex;
+  height: 100h; /* Full height */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.sidebarWrapper {
+  width: 250px; /* Largeur de la sidebar */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.content {
+  flex: 1; /* Remplit le reste de l'espace */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Si la sidebar est masquée, le content occupe toute la largeur */
+.content.full {
+  width: 100%;
+}
+
+/* Style pour la sidebar quand elle est cachée ou togglée */
+.sidebarWrapper.toggle {
+  transform: translateX(-250px); /* Cache la sidebar */
+}
+
+.content.toggle {
+  margin-left: 0;
+}
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 1rem;
+  transition: margin-left 0.3s ease;
+}
+
+.with-sidebar {
+  margin-left: 250px; /* largeur de ton sidebar */
+}

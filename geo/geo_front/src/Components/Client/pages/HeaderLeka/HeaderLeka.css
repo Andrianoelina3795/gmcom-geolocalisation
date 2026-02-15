@@ -1,0 +1,80 @@
+
+/* === Navbar fixée en haut === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-header h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+}
+
+/* === Couleurs personnalisées du navbar === */
+.navbar-custom-light {
+  background-color: navajowhite !important; /* Fond clair personnalisé */
+}
+
+.navbar-custom-dark {
+  background-color: #001f3f !important; /* Fond sombre personnalisé */
+}
+
+/* === Lien navbar === */
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* === Bouton toggle dark mode === */
+.btn-outline-secondary {
+  border-radius: 50px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Avatar utilisateur === */
+.dropdown-toggle img {
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.dropdown-toggle img:hover {
+  border-color: #0d6efd;
+}
+
+/* === Menu déroulant utilisateur === */
+.dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* === Responsive menu pour petit écran === */
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-top: 1rem;
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .dropdown-toggle span {
+    display: none;
+  }
+
+  .navbar-toggler{
+    margin-left: 25px;
+  }
+}

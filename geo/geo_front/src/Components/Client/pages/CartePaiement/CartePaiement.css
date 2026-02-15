@@ -1,0 +1,109 @@
+/* Spinner de chargement */
+.spinner-grow.text-primary {
+  border-color: #007bff;
+  border-right-color: transparent;
+}
+
+/* Conteneur principal */
+.form {
+  height: 35px;
+}
+
+/*.alert.rouge { background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; }
+.alert.vert { background-color: #d4edda; color: #155724; padding: 10px; border-radius: 5px; }
+.alert.bleu { background-color: #cce5ff; color: #004085; padding: 10px; border-radius: 5px; }
+.alert.violet { background-color: #e2d6f3; color: #4b0082; padding: 10px; border-radius: 5px; }*/
+
+/* Styles des badges d'annonce */
+.alert {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Couleurs spécifiques */
+.alert.rouge {
+    background-color: #e74c3c;  /* rouge vif */
+}
+
+.alert.vert {
+    background-color: #27ae60;  /* vert */
+}
+
+.alert.bleu {
+    background-color: #3498db;  /* bleu */
+}
+
+.alert.violet {
+    background-color: #8e44ad;  /* violet */
+}
+
+.header-zone {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.zone-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.zone-form-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.zone-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-bottom:  5px;
+  margin: 0;
+}
+
+.client-form-logo {
+  width: 50px;
+  height: auto;
+}
+
+.client-title{
+    font-size: 1.7rem;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.tableau {
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tableau th,
+.tableau td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.tableau th {
+  background-color: #e8f0fe;
+  font-weight: small;
+}
+

@@ -1,0 +1,18 @@
+/* Structure de base du layout */
+.client-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9; /* optionnel : couleur fond */
+}
+
+/* Zone centrale : contenu principal */
+.client-layout main {
+  flex: 1;
+  padding: 1remx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+

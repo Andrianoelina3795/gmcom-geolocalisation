@@ -1,0 +1,210 @@
+/* Styles pour l'impression */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body * {
+    visibility: hidden;
+  }
+  
+  .print-content, .print-content * {
+    visibility: visible;
+  }
+  
+  .print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .print-section {
+    page-break-inside: avoid;
+  }
+}
+
+/* Conteneur principal */
+.print-container {
+  margin-top: 20px;
+}
+
+/* En-tête */
+.print-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+}
+
+.print-logo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.print-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.print-title h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.print-title h2 {
+  margin: 5px 0 0 0;
+  color: #3498db;
+  font-size: 18px;
+}
+
+.print-date {
+  font-style: italic;
+  color: #666;
+}
+
+/* Sections */
+.print-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.print-section h3 {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin: -15px -15px 15px -15px;
+  border-bottom: 1px solid #ddd;
+  color: #2c3e50;
+}
+
+/* Grilles */
+.print-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.print-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.print-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.print-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.print-field label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.print-field span {
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-radius: 3px;
+  border: 1px solid #e9ecef;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+/* Tables assainissement */
+.sanitary-print-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.sanitary-print-table th,
+.sanitary-print-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.sanitary-print-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* Photo client */
+.photo-container {
+  text-align: center;
+}
+
+.client-photo {
+  max-width: 200px;
+  max-height: 250px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Consentement */
+.consentement-box {
+  background-color: #e8f5e8;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #4caf50;
+}
+
+/* Pied de page */
+.print-footer {
+  margin-top: 40px;
+  border-top: 2px solid #333;
+  padding-top: 20px;
+}
+
+.signature-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.signature-box {
+  text-align: center;
+}
+
+.signature-line {
+  width: 200px;
+  height: 1px;
+  background-color: #333;
+  margin: 20px auto 0 auto;
+}
+
+.footer-note {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size: 12px;
+}
+
+/* Bouton d'impression */
+.no-print {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}

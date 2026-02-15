@@ -1,0 +1,64 @@
+/* Conteneur principal du formulaire */
+.header-contact {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Boîte du formulaire */
+.contact-form-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+.contact-title {
+  font-weight: bold;
+  color: #198754; /* vert Bootstrap (btn-success) */
+}
+
+/* Champs de formulaire */
+.contact-form .form-control,
+.contact-form .form-select {
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+}
+
+/* Placeholder */
+.contact-form .form-control::placeholder {
+  color: #6c757d;
+}
+
+/* Boutons */
+.contact-form .btn {
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 6px;
+}
+
+/* Bouton retour */
+.contact-form .btn-outline-secondary {
+  margin-left: 15px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .contact-form-box {
+    padding: 20px;
+  }
+
+  .contact-form .btn {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .contact-form .btn-outline-secondary {
+    margin-left: 0;
+  }
+}

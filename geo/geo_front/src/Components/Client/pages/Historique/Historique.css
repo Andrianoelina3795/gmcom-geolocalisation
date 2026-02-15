@@ -1,0 +1,374 @@
+/* Container principal */
+.header-historique {
+  min-height: 100vh;
+ background: linear-gradient(135deg,  navajowhite 0%, #75deb3 100%);
+  padding: 20px;
+}
+
+.historique-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Boîte du formulaire */
+.historique-form-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+}
+
+/* Titre */
+.historique-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de brillance sur le titre */
+.historique-title::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(30deg);
+  }
+}
+
+/* Description */
+.historique-description {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Wrapper de la carte */
+.map-wrapper {
+  border-radius: 15px !important;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 3px solid #007bff !important;
+}
+
+.map-wrapper:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Carte Leaflet */
+.leaflet-container {
+  border-radius: 12px !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Popup Leaflet */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) !important;
+  border: 2px solid #007bff;
+}
+
+.leaflet-popup-content {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  margin: 15px !important;
+  line-height: 1.5;
+}
+
+.leaflet-popup-content strong {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.leaflet-popup-tip {
+  background: #007bff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Marqueurs personnalisés */
+.custom-marker {
+  background: #007bff;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.5);
+  animation: pulse-marker 2s infinite;
+}
+
+@keyframes pulse-marker {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.7);
+  }
+}
+
+/* Spinner de chargement */
+.spinner-grow.text-primary {
+  border-color: #007bff;
+  border-right-color: transparent;
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Message aucune donnée */
+.text-center p {
+  font-size: 1.3rem;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  border: 2px dashed #dee2e6;
+  margin: 20px 0;
+}
+
+/* Indicateur de nombre de positions */
+.position-count {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Animation d'entrée */
+.historique-page {
+  animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles pour les clusters de marqueurs (si utilisé) */
+.marker-cluster-small {
+  background-color: rgba(181, 226, 140, 0.6);
+}
+
+.marker-cluster-small div {
+  background-color: rgba(110, 204, 57, 0.6);
+}
+
+.marker-cluster-medium {
+  background-color: rgba(241, 211, 87, 0.6);
+}
+
+.marker-cluster-medium div {
+  background-color: rgba(240, 194, 12, 0.6);
+}
+
+.marker-cluster-large {
+  background-color: rgba(253, 156, 115, 0.6);
+}
+
+.marker-cluster-large div {
+  background-color: rgba(241, 128, 23, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .historique-form-box {
+    padding: 30px;
+  }
+  
+  .historique-title {
+    font-size: 2rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-historique {
+    padding: 10px;
+  }
+  
+  .historique-form-box {
+    padding: 25px 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  .historique-title {
+    font-size: 1.6rem;
+    padding: 12px 20px;
+  }
+  
+  .historique-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .map-wrapper {
+    margin-top: 20px !important;
+  }
+  
+  .leaflet-container {
+    height: 400px !important;
+  }
+  
+  .leaflet-popup-content {
+    font-size: 12px !important;
+    margin: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .historique-form-box {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+  
+  .historique-title {
+    font-size: 1.4rem;
+    padding: 10px 15px;
+  }
+  
+  .historique-description {
+    font-size: 1rem;
+  }
+  
+  .leaflet-container {
+    height: 350px !important;
+  }
+  
+  .position-count {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+.historique-form-box:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Style pour les états de hover sur les marqueurs */
+.leaflet-marker-icon:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Légende personnalisée pour la carte */
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border: 2px solid #007bff;
+}
+
+.legend-title {
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation pour le chargement des données */
+.data-loading {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style pour les dates dans les popups */
+.popup-date {
+  color: #28a745;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.popup-coords {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.popup-location {
+  color: #007bff;
+  font-weight: 500;
+  font-size: 13px;
+}

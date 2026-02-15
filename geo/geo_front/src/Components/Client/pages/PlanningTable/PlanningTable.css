@@ -1,0 +1,99 @@
+.container {
+  margin-top: 120px;
+  padding: 10px;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.table th, .table td {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+th[scope="row"] {
+  background-color: #f8f9fa;
+}
+
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th, td {
+  padding: 12px 8px;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e9f7fe;
+}
+
+.agent-name {
+  font-weight: bold;
+  background-color: #f1f1f1;
+}
+
+.zero-value {
+  color: red;
+  font-weight: bold;
+}
+
+.activity-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.bg-red {
+  background-color: #ffcccc;
+  color: #a70000;
+  font-weight: bold;
+}
+
+.bg-green {
+  background-color: #ccffcc;
+  color: #006600;
+  font-weight: bold;
+}
+
+.bg-blue {
+  background-color: #cce5ff;
+  color: #004085;
+  font-weight: bold;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  th, td {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+
+  .table-container {
+    padding: 5px;
+  }
+}
+

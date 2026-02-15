@@ -1,0 +1,266 @@
+/* Container principal */
+.header-clientForm {
+  min-height: 100vh;
+  background: linear-gradient(135deg,  navajowhite 0%, #75deb3 100%);
+  /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+  padding: 20px;
+}
+
+.client-form-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.client-form-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+/* ---------- Header ---------- */
+.client-form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-align: initial;
+  padding: 0 10px;
+}
+
+.form {
+  height: 35px;
+  margin-top: 3px;
+}
+
+.form-check-rel {
+  margin-top: 50px;
+}
+
+.client-form-logo {
+  width: 100px;
+  height: auto;
+}
+
+.client-form-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 15px 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* ---------- Titres des sections ---------- */
+.client-form-section-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+/* ---------- Tables ---------- */
+.table-container {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.table-container table {
+  min-width: 600px;
+}
+
+/* ---- Table sanitation ---- */
+.sanitary-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.sanitary-table th,
+.sanitary-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  min-width: 100px;
+}
+
+.sanitary-table td[contenteditable] {
+  background-color: #fafafa;
+  cursor: text;
+}
+
+.sanitary-table td[contenteditable]:focus {
+  outline: 2px solid #1976d2;
+  background-color: #e3f2fd;
+}
+
+/* ---- Table fusion produits ---- */
+.fusion-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 15px;
+}
+
+.fusion-table th,
+.fusion-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  min-width: 100px;
+  background-color: #f9f9f9;
+}
+
+.fusion-table th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* ---------- Bouton de soumission ---------- */
+button[type="submit"] {
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1565c0;
+}
+
+/* ---------- Checkbox consentement ---------- */
+.form-check-label {
+  font-size: 1rem;
+}
+
+.camera-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.camera-box .btn {
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.camera-box .btn:hover {
+  transform: scale(1.05s);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.photo-preview img,
+.photo-impression {
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
+  border: 2px solid #333;
+}
+
+.photo-id {
+  width: 4cm;
+  height: 4cm;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+
+.photo-clientList {
+  width: 4cm;
+  height: 4cm;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1 solid #ccc
+}
+
+.print-zone {
+  display: none;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+.print-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.info {
+  width: 65%;
+}
+
+.photo {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000;
+}
+
+
+@media print {
+  .client-form,
+  .camera-box,
+  button {
+    display: none;
+  }
+  .print-zone {
+    display: block;
+  }
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .client-form-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-form-logo {
+    width: 70px;
+  }
+
+  .client-form-title {
+    font-size: 1.2rem;
+  }
+
+  .form-check-label {
+    font-size: 0.9rem;
+  }
+
+  .sanitary-table th,
+  .sanitary-table td,
+  .fusion-table th,
+  .fusion-table td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,166 @@
+.container {
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.table-container {
+  width: 100%;
+}
+
+/* Spinner de chargement */
+.spinner-grow.text-primary {
+  border-color: #007bff;
+  border-right-color: transparent;
+}
+
+.coordonnee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #111;
+}
+
+.coordonnee-table th,
+.coordonnee-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.coordonnee-table th {
+  background-color: #111;
+  color: #fff;
+  font-weight: bold;
+}
+
+.coordonnee-table tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.2s ease;
+}
+
+.table-small td {
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.search-input-group {
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+}
+
+.search-icon {
+  padding: 10px;
+  background-color: #6c757d;
+  color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container h2 {
+    text-align: center;
+  }
+
+  .coordonnee-table thead {
+    display: none;
+  }
+
+  .coordonnee-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+
+  .coordonnee-table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+  }
+
+  .coordonnee-table tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-right: auto;
+    min-width: 40%;
+    display: inline-block;
+  }
+
+  .coordonnee-table tbody tr td:last-child {
+    border-bottom: none;
+  }
+
+  .search-bar-container {
+    justify-content: center;
+  }
+
+  .search-input-group {
+    max-width: 100%;
+  }
+}
+.client-table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  display: block;
+  scrollbar-width: thin;
+}
+
+.full-width-table {
+  min-width: 1900px;
+  width: max-content;
+}
+
+/* Optionnel : styliser la scrollbar (Chrome) */
+.client-table-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.client-table-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.client-table-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}

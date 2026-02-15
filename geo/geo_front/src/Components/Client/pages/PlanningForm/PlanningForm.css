@@ -1,0 +1,125 @@
+/* Container principal */
+.header-planningForm {
+  min-height: 100vh;
+  background: linear-gradient(135deg,  navajowhite 0%, #75deb3 100%);
+  /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+  padding: 20px;
+}
+
+.planning-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px 10px 0 0 !important;
+  padding: 1rem;
+}
+
+.title {
+  font-weight: 600;
+  margin: 0;
+}
+
+.responsive-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.planning-table {
+  margin-bottom: 0;
+  min-width: 800px;
+}
+
+.planning-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+
+.planning-table td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.activity-label {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  white-space: nowrap;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.total-cell {
+  background-color: #e9ecef;
+  font-weight: 600;
+}
+
+.table-info {
+  background-color: #d1ecf1 !important;
+}
+
+.btn {
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border: none;
+  
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  border: none;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+@media (max-width: 768px) {
+  .planning-container {
+    padding: 10px;
+  }
+  
+  .card-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

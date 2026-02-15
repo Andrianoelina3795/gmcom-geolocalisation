@@ -1,0 +1,125 @@
+/* Occupation complète de l'écran */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteneur principal de la carte */
+.geotest-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.geotest-page{
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Message de statut (précision GPS) */
+.status-message {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Couleurs selon la précision */
+.status-good {
+  color: green;
+  background-color: #e6ffed;
+}
+
+.status-warning {
+  color: orange;
+  background-color: #fffbe6;
+}
+
+.status-danger {
+  color: white;
+  background-color: red;
+}
+
+/* Carte adaptative */
+.map-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  min-height: 300px;
+}
+
+/* Message d'attente lors du chargement */
+.loading-message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Skeleton UI */
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.skeleton-map {
+  width: 100%;
+  height: 250px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  animation: pulse 1.5s infinite;
+  margin-bottom: 1rem;
+}
+
+.skeleton-text {
+  width: 80%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  animation: pulse 1.5s infinite;
+  margin: 0.4rem 0;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+
+/* Responsive tablette */
+@media (max-width: 768px) {
+  .status-message {
+    font-size: 14px;
+  }
+
+  .map-wrapper {
+    min-height: 250px;
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+  .status-message {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .loading-message {
+    font-size: 1rem;
+  }
+}
